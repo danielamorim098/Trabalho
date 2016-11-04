@@ -1,0 +1,135 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="./bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+	<title>Cadastro do Fornecedor</title>
+</head>
+
+<body>
+	<h1>Cadastro do Fornecedor</h1>
+
+	<form class="form-horizontal">
+		<div class="form-group">
+			<label for="inputName3" class="col-sm-2 control-label">Nome do Fornecedor</label>
+			<div class="col-sm-2">
+				<input type="text" class="form-control" id="inputName3" maxlength="100" required placeholder="Nome">
+			</div>
+		</div>
+
+
+		<div class="form-group">
+			<label for="inputEmail1" class="col-sm-2 control-label">CNPJ</label>
+			<div class="col-sm-2">
+				<input type="text" class="form-control" id="CNPJ" placeholder="00.000.000/0000-00" </div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputEmail3" class="col-sm-2 control-label">CEP</label>
+<div class="col-sm-2">
+			<input id="txtCep" type="txt" class="form-control"/>
+</div>
+
+		
+				<label for="inputEmail3" class="col-sm-2 control-label">UF</label>
+<div class="col-sm-2">
+            <input id="txtUf" type="txt" class= "form-control"/>
+		</div>
+			
+            <label for="inputEmail3" class="col-sm-2 control-label">Cidade</label>
+<div class="col-sm-2">
+            <input id="txtCidade" type="txt" class= "form-control"/>
+		</div>
+            
+            
+            <label for="inputEmail3" class="col-sm-2 control-label">Bairro</label>
+<div class="col-sm-2">
+            <input id="txtBairro" type="txt" class= "form-control"/>
+		</div>
+        <label for="inputEmail3" class="col-sm-2 control-label">Logradouro</label>
+<div class="col-sm-2">
+            <input id="txtTipoLogradouro" type="txt" class= "form-control"/>
+		</div>
+        <label for="inputEmail3" class="col-sm-2 control-label">Logradouro</label>
+<div class="col-sm-2">
+            <input id="txtLogradouro" type="txt" class= "form-control"/>
+		</div>
+		</div>
+
+
+        <div>
+            <button id="btnEndereco" type="button">Meu Endereço</button>
+		</div>
+		
+		</div>
+
+
+		</div>
+
+
+       <div class="form-group">
+			<label for="inputEmail1" class="col-sm-2 control-label">Telefone</label>
+			<div class="col-sm-2">
+				<input type="text" class="form-control" id="Telefone" placeholder="(00) 0000-0000" </div>
+			</div>
+		</div>
+
+        <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default" >Cadastrar</button>
+     
+    </div>
+  </div>
+
+	</form>
+
+	<script src="./bower_components/jquery/dist/jquery.js"></script>
+	<script src="./jquery.mask.js"></script>
+	<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+    $(document).ready(function () {
+    $("#btnEndereco").click(function () {
+        $.ajax({
+            url: "http://cep.republicavirtual.com.br/web_cep.php?cep= " + $("#txtCep").val() + "&formato=jsonp",
+            type: "GET",
+            dataType: "json",
+            success: function (json) {
+                $("#txtLogradouro").val(json.logradouro);
+                $("#txtTipoLogradouro").val(json.tipo_logradouro);
+                $("#txtBairro").val(json.bairro);
+                $("#txtCidade").val(json.cidade);
+                $("#txtUf").val(json.uf);
+
+            },
+
+        });
+
+
+
+
+    });
+});
+</script>
+
+
+
+
+	<script>
+    $(document).ready(function()
+    {
+        $('#CNPJ').mask('0.000.000/0000-00')
+    });
+    $(document).ready(function()
+    {
+        $('#Telefone').mask('(00) 0000-0000')
+    });
+
+    </script>
+
+</body>
+
+</html>

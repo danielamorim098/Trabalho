@@ -24,7 +24,7 @@
 		<div class="form-group">
 			<label for="inputName3" class="col-sm-2 control-label">Nome do Fornecedor</label>
 			<div class="col-sm-2">
-				<input type="text" class="form-control" id="inputName3" maxlength="100" required placeholder="Nome">
+				<input type="text" class="form-control" id="inputName3" maxlength="100" required placeholder="Nome" required>
 			</div>
 		</div>
 
@@ -32,45 +32,48 @@
 		<div class="form-group">
 			<label for="inputEmail1" class="col-sm-2 control-label">CNPJ</label>
 			<div class="col-sm-2">
-				<input type="text" class="form-control" id="CNPJ" placeholder="00.000.000/0000-00" </div>
+				<input type="text" class="form-control" id="CNPJ" placeholder="00.000.000/0000-00" required> 
+                </div>
 			</div>
 		</div>
 
-		<div class="form-group">
-			<label for="inputEmail3" class="col-sm-2 control-label">CEP</label>
-<div class="col-sm-2">
-			<input id="txtCep" type="txt" class="form-control"/>
+		
+
+        <div  class="form-group">
+			<label for="inputEmail3" class="col-sm-2 control-label" >CEP</label>
+<div class="col-sm-2" style="margin:5px 1px">
+			<input id="txtCep" type="txt" class="form-control" required>
 </div>
 
 		
-				<label for="inputEmail3" class="col-sm-2 control-label">UF</label>
-<div class="col-sm-2">
+				<label for="inputEmail3" class="col-sm-2 control-label" style="margin-right:25px" >UF</label>
+<div class="col-sm-2" style="margin:5px -40px">
             <input id="txtUf" type="txt" class= "form-control"/>
 		</div>
 			
-            <label for="inputEmail3" class="col-sm-2 control-label">Cidade</label>
-<div class="col-sm-2">
-            <input id="txtCidade" type="txt" class= "form-control"/>
+            <label for="inputEmail3" class="col-sm-2 control-label" style="margin-left:-40px" >Cidade</label>
+<div class="col-sm-2" style="margin-bottom:30px">
+            <input id="txtCidade" type="txt" class= "form-control" style="margin:5px"/>
 		</div>
-            
+
             
             <label for="inputEmail3" class="col-sm-2 control-label">Bairro</label>
-<div class="col-sm-2">
+<div class="col-sm-2" style="margin-left:1px">
             <input id="txtBairro" type="txt" class= "form-control"/>
 		</div>
-        <label for="inputEmail3" class="col-sm-2 control-label">Logradouro</label>
-<div class="col-sm-2">
+        <label for="inputEmail3" class="col-sm-2 control-label" style="margin-left:-10px">Logradouro</label>
+<div class="col-sm-2" style="margin-left:-5px">
             <input id="txtTipoLogradouro" type="txt" class= "form-control"/>
 		</div>
-        <label for="inputEmail3" class="col-sm-2 control-label">Logradouro</label>
-<div class="col-sm-2">
+        <label for="inputEmail3" class="col-sm-2 control-label" debaixodacidade style="margin-left:-65px">Logradouro</label>
+<div class="col-sm-2" style="margin-left:-10px">
             <input id="txtLogradouro" type="txt" class= "form-control"/>
 		</div>
 		</div>
 
 
         <div>
-            <button id="btnEndereco" type="button">Meu Endereço</button>
+            <button id="btnEndereco"  class="btn btn-default" type="button">Meu Endereço</button>
 		</div>
 		
 		</div>
@@ -82,13 +85,14 @@
        <div class="form-group">
 			<label for="inputEmail1" class="col-sm-2 control-label">Telefone</label>
 			<div class="col-sm-2">
-				<input type="text" class="form-control" id="Telefone" placeholder="(00) 0000-0000" </div>
+				<input type="text" class="form-control" id="Telefone" placeholder="(00) 0000-0000" required>
+                </div>
 			</div>
 		</div>
 
         <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-       <a class="btn btn-default" href="home.html" role="button">Cadastrar</a>
+       <button class="btn btn-default" type="submit" formaction="home.html">Cadastrar</button>
     </div>
   </div>
 
